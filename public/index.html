@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feria de Emprendedores</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <h1>Feria de Emprendedores 2026</h1>
+    <p>Postula tu emprendimiento y sé parte de la próxima feria.</p>
+  </header>
+
+  <main>
+    <!-- Formulario de postulacion -->
+    <section class="seccion-formulario">
+      <h2>Formulario de Postulación</h2>
+      <form id="formulario-postulacion" novalidate>
+
+        <div class="campo">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej: Ana Pérez">
+          <span class="mensaje-error" id="error-nombre"></span>
+        </div>
+
+        <div class="campo">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" placeholder="Ej: ana@correo.com">
+          <span class="mensaje-error" id="error-correo"></span>
+        </div>
+
+        <div class="campo">
+          <label for="clave">Contraseña</label>
+          <input type="password" id="clave" name="clave" placeholder="Mínimo 6 caracteres">
+          <span class="mensaje-error" id="error-clave"></span>
+        </div>
+
+        <div class="campo">
+          <label for="confirmar-clave">Confirmar contraseña</label>
+          <input type="password" id="confirmar-clave" name="confirmar-clave" placeholder="Repite tu contraseña">
+          <span class="mensaje-error" id="error-confirmar-clave"></span>
+        </div>
+
+        <div class="campo">
+          <label for="proyecto">Nombre del proyecto</label>
+          <input type="text" id="proyecto" name="proyecto" placeholder="Ej: Miel Artesanal Sur">
+          <span class="mensaje-error" id="error-proyecto"></span>
+        </div>
+
+        <div class="campo">
+          <label for="categoria">Categoría</label>
+          <select id="categoria" name="categoria">
+            <option value="">-- Selecciona una categoría --</option>
+            <option value="alimentos">Alimentos</option>
+            <option value="artesania">Artesanía</option>
+            <option value="tecnologia">Tecnología</option>
+            <option value="servicios">Servicios</option>
+          </select>
+          <span class="mensaje-error" id="error-categoria"></span>
+        </div>
+
+        <button type="submit" class="boton-enviar">Enviar postulación</button>
+      </form>
+    </section>
+
+    <!-- Listado de los postulantes -->
+    <section class="seccion-listado">
+      <h2>Postulantes registrados</h2>
+      <ul id="lista-postulantes" class="lista-postulantes">
+      </ul>
+      <p id="mensaje-vacio" class="mensaje-vacio">Aún no hay postulantes registrados.</p>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <p>&copy; 2026 Feria de Emprendedores</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
