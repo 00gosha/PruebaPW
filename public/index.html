@@ -7,17 +7,90 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <header class="encabezado">
     <h1>Feria de Emprendedores 2026</h1>
-    <p>Postula tu emprendimiento y sé parte de la próxima feria.</p>
+    <p>Postula tu proyecto y sé parte de la próxima feria.</p>
+
+    <nav class="nav-atajos">
+      <a href="#sobre-la-feria" class="boton-atajo">Sobre la feria</a>
+      <a href="#categorias" class="boton-atajo">Categorías</a>
+      <a href="#que-puedes-hacer" class="boton-atajo">Qué puedes hacer</a>
+      <a href="#postulantes-registrados" class="boton-atajo">Postulantes registrados</a>
+      <a href="#formulario-postulacion" class="boton-cta">Postula aquí</a>
+    </nav>
   </header>
 
   <main>
+
+    <section class="seccion-info" id="sobre-la-feria">
+      <h2>Sobre la Feria</h2>
+      <p>
+        La Feria de Emprendedores reúne a decenas de emprendimientos locales en un solo
+        lugar, durante un fin de semana lleno de actividades, ventas y networking.
+        Si tienes un emprendimiento y quieres darte a conocer, esta es tu oportunidad.
+        Postula y se parte de la feria de emprendedores 2026.
+      </p>
+
+      <div class="grid-datos">
+        <div class="dato">
+          <div>
+            <strong>Fecha</strong>
+            <p>15 y 16 de agosto, 2026</p>
+          </div>
+        </div>
+        <div class="dato">
+          <div>
+            <strong>Dirección</strong>
+            <p>Av. Tadeo Haenke 1234, Iquique</p>
+          </div>
+        </div>
+        <div class="dato">
+          <div>
+            <strong>Horario</strong>
+            <p>10:00 a 20:00 hrs</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categorias de la feria -->
+    <section class="seccion-categorias" id="categorias">
+      <h2>Categorías de participación</h2>
+      <div class="grid-categorias">
+        <div class="tarjeta-categoria">
+          <h3>Alimentos</h3>
+          <p>Productos gastronómicos, dulces, conservas y bebidas artesanales.</p>
+        </div>
+        <div class="tarjeta-categoria">
+          <h3>Artesanía</h3>
+          <p>Trabajos manuales, textiles, cerámica y decoración.</p>
+        </div>
+        <div class="tarjeta-categoria">
+          <h3>Tecnología</h3>
+          <p>Proyectos digitales, apps, hardware y soluciones innovadoras.</p>
+        </div>
+        <div class="tarjeta-categoria">
+          <h3>Servicios</h3>
+          <p>Consultorías, talleres, reparaciones y asesorías.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion-actividades" id="que-puedes-hacer">
+      <h2>¿Qué puedes hacer en la feria?</h2>
+      <ul class="lista-actividades">
+        <li>🛍️ Comprar productos directos de los emprendedores.</li>
+        <li>🍴 Degustar comida artesanal de distintas categorías.</li>
+        <li>🎓 Participar en talleres gratuitos de emprendimiento.</li>
+        <li>🤝 Hacer networking con otros emprendedores locales.</li>
+        <li>🎤 Disfrutar de charlas y actividades en vivo.</li>
+      </ul>
+    </section>
+
     <!-- Formulario de postulacion -->
-    <section class="seccion-formulario">
+    <section class="seccion-formulario" id="formulario-postulacion">
       <h2>Formulario de Postulación</h2>
-      <form id="formulario-postulacion" novalidate>
+      <form id="formulario-postulacion-form" novalidate>
 
         <div class="campo">
           <label for="nombre">Nombre completo</label>
@@ -32,15 +105,9 @@
         </div>
 
         <div class="campo">
-          <label for="clave">Contraseña</label>
-          <input type="password" id="clave" name="clave" placeholder="Mínimo 6 caracteres">
-          <span class="mensaje-error" id="error-clave"></span>
-        </div>
-
-        <div class="campo">
-          <label for="confirmar-clave">Confirmar contraseña</label>
-          <input type="password" id="confirmar-clave" name="confirmar-clave" placeholder="Repite tu contraseña">
-          <span class="mensaje-error" id="error-confirmar-clave"></span>
+          <label for="confirmar-correo">Confirmar correo electrónico</label>
+          <input type="email" id="confirmar-correo" name="confirmar-correo" placeholder="Repite tu correo">
+          <span class="mensaje-error" id="error-confirmar-correo"></span>
         </div>
 
         <div class="campo">
@@ -66,16 +133,26 @@
     </section>
 
     <!-- Listado de los postulantes -->
-    <section class="seccion-listado">
+    <section class="seccion-listado" id="postulantes-registrados">
       <h2>Postulantes registrados</h2>
+
+      <div class="campo-buscador">
+        <input
+          type="text"
+          id="buscador-postulantes"
+          placeholder="Buscar por nombre o proyecto..."
+        >
+      </div>
+
       <ul id="lista-postulantes" class="lista-postulantes">
       </ul>
       <p id="mensaje-vacio" class="mensaje-vacio">Aún no hay postulantes registrados.</p>
     </section>
+
   </main>
 
   <footer class="pie-pagina">
-    <p>&copy; 2026 Feria de Emprendedores</p>
+    <p>&copy; 2026 Feria de Emprendedores — Parque Municipal, Av. Central 1234, Iquique</p>
   </footer>
 
   <script src="script.js"></script>
