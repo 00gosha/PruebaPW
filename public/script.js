@@ -1,5 +1,4 @@
-// script.js
-// Lógica de la Feria de Emprendedores: validación, eventos, buscador y persistencia en localStorage
+// Lógica de la Feria de Emprendedores: validación, eventos, buscador y persistencia local.
 
 // Elementos del DOM
 const formulario = document.getElementById("formulario-postulacion-form");
